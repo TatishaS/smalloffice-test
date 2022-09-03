@@ -1,0 +1,84 @@
+@import 'vars';
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  min-width: 32rem;
+  min-height: 100vh;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  background: linear-gradient(
+      360deg,
+      #ffffff 26.36%,
+      rgba(255, 255, 255, 0.64) 114.64%
+    ),
+    #ffffff;
+  color: $text-color;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  word-wrap: break-word;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+.main {
+  flex: 1 0 auto;
+  padding-top: 1.2rem;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: $mw + px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* .title {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 26px;
+} */
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 2.4rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 3.2rem;
+    line-height: 2.7rem;
+  }
+}

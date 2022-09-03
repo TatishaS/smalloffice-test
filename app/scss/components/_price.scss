@@ -1,0 +1,22 @@
+.price {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 8px 24px rgba(29, 29, 27, 0.08);
+  &__inner {
+    padding: 2.8rem 1.6rem;
+  }
+
+  &__product-img {
+    width: 5.7rem;
+    height: 6.2rem;
+  }
+
+  &__users-select,
+  &__years-select {
+    flex: 0 0 9.7rem;
+    appearance: none;
+    background-image: url('../../images/select-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: 98% 14px;
+  }
+}

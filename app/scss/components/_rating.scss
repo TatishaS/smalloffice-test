@@ -1,0 +1,62 @@
+.rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__stars {
+    display: inline-flex;
+    max-width: 10.1rem;
+    height: 2rem;
+    margin-right: 0.4rem;
+  }
+
+  /* make hover effect work properly in IE */
+  &__star {
+    pointer-events: none;
+  }
+
+  /* hide radio inputs */
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    padding: 0.2rem 0.2rem 0 0.2rem;
+
+    &--zero {
+      display: none;
+      padding: 0;
+    }
+  }
+
+  /* add padding and positioning to half star labels */
+  &__label--half {
+    padding-right: 0;
+    margin-right: -1.1em;
+  }
+
+  /* set default star color */
+  &__star {
+    fill: $accent-yellow;
+
+    path {
+      fill: $accent-yellow;
+    }
+  }
+  /* 
+  &__star.rating__star--half {
+    fill: linear-gradient(270deg, #cccccc 48.4%, #ffe810 48.41%);
+  } */
+
+  /* if any input is checked, make its following siblings grey  */
+  &__input:checked ~ .rating__label .rating__star {
+    fill: #cccccc;
+    path {
+      fill: #cccccc;
+    }
+  }
+
+  &__input--half:checked + .rating__label--half {
+    z-index: 10;
+  }
+}
