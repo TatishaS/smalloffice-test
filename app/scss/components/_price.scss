@@ -1,22 +1,206 @@
 .price {
   width: 100%;
   background: #ffffff;
-  box-shadow: 0px 8px 24px rgba(29, 29, 27, 0.08);
+  box-shadow: 0 0.8rem 2.4rem rgba(29, 29, 27, 0.08);
   &__inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     padding: 2.8rem 1.6rem;
+  }
+
+  &__product-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-right: 1px solid #cccccc;
+    padding: 2.5rem 0;
+  }
+
+  &__product-name {
+    max-width: 12.7rem;
+    font-weight: 700;
+    font-size: 2.1rem;
+    line-height: 2.5rem;
   }
 
   &__product-img {
     width: 5.7rem;
     height: 6.2rem;
+    margin-right: 1.2rem;
+  }
+  &__details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0.8rem;
+    margin-right: 1.7rem;
+  }
+
+  &__users {
+    margin-right: 0.8rem;
+  }
+
+  &__years {
+    margin-right: 1.7rem;
+  }
+
+  &__users-label,
+  &__years-label {
+    display: block;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    color: $text-color-444;
+    margin-bottom: 0.9rem;
   }
 
   &__users-select,
   &__years-select {
-    flex: 0 0 9.7rem;
+    max-width: 9.7rem;
+    //flex: 0 0 9.7rem;
+
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: inherit;
+    color: inherit;
+    background: #fff;
+    border: 1px solid $border-green;
+    border-radius: 0.4rem;
+
+    padding: 0.8rem 3.7rem 0.8rem 1.2rem;
     appearance: none;
     background-image: url('../../images/select-arrow.svg');
     background-repeat: no-repeat;
-    background-position: 98% 14px;
+    background-position: 90% 14px;
+  }
+
+  &__number {
+    text-align: center;
+    margin-right: 1.7rem;
+    padding-top: 0.4rem;
+  }
+
+  &__number-linethrough {
+    display: block;
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    text-decoration-line: line-through;
+    opacity: 0.6;
+    margin-bottom: 0.7rem;
+  }
+
+  &__number-final {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__number-big {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3.6rem;
+  }
+
+  &__number-cents {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin-top: -2rem;
+  }
+
+  &__number-currency {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.4rem;
+    padding-top: 1.4rem;
+  }
+
+  &__cta-btn {
+    margin-bottom: 2.1rem;
+  }
+
+  &__renewal {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__checkbox-input {
+    display: none;
+  }
+
+  &__checkbox-label {
+    position: relative;
+    display: block;
+  }
+
+  &__checkbox-input + label {
+    &::before {
+      position: absolute;
+
+      content: '';
+
+      top: 0;
+      left: 1.9rem;
+
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.3rem;
+
+      background-color: $darken-green;
+    }
+  }
+
+  &__checkbox-input:checked + label {
+    &::after {
+      position: absolute;
+
+      content: '';
+
+      top: 0.3rem;
+      left: 2.1rem;
+
+      width: 1.5rem;
+      height: 1.3rem;
+
+      background-image: url('../../images/tick-white.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 0;
+    }
+  }
+
+  &__checkbox-label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5.1rem;
+    font-family: 'Museo Sans';
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #375050;
+
+    span {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__info-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #556e6e;
+    //text-align: center;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #556e6e;
+    padding: 0.1rem;
   }
 }
